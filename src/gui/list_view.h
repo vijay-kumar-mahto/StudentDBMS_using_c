@@ -9,5 +9,7 @@ extern sqlite3 *db;
 extern AppData *app_data;
 
 void show_list_view(GtkWidget *window);
+// Modified: Added declaration for refreshing the list view
+void refresh_list_view(void);
 
 #endif

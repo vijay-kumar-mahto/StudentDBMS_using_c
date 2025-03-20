@@ -118,20 +118,68 @@ static void on_key_pressed(GtkEventController *controller, guint keyval, guint k
     }
 }
 
-// Modified: Added callback for deleting all students
-static void on_delete_all_students(GtkWidget *button, gpointer window) {
+// Modified: Added callback for deleting all students with confirmation
+static void on_confirm_delete_all(GtkWidget *button, gpointer data) {
+    GtkWidget *dialog = GTK_WIDGET(data);
     if (db_delete_all_students(db)) {
         log_action("All student records deleted");
         voice_speak("All students deleted successfully");
         gtk_label_set_text(GTK_LABEL(app_data->status_bar), "All students deleted");
         gtk_widget_queue_draw(app_data->chart_area); // Refresh chart
-        show_notification(GTK_WINDOW(window), "Success", "All student records deleted successfully", FALSE);
+        show_notification(GTK_WINDOW(gtk_window_get_transient_for(GTK_WINDOW(dialog))),
+                         "Success", "All student records deleted successfully", FALSE);
+
     } else {
         log_action("Failed to delete all student records");
         voice_speak("Failed to delete all students");
-        gtk_label_set_text(GTK_LABEL(app_data->status_bar), "Error: Failed to delete all students");
-        show_notification(GTK_WINDOW(window), "Error", "Failed to delete all student records", TRUE);
+        gtk_label_set_text(GTK_LABEL(app_data->status_bar), "Error");
+        show_notification(GTK_WINDOW(gtk_window_get_transient_for(GTK_WINDOW(dialog))),
+                         "Error", "Failed to delete all student records", TRUE);
     }
+    gtk_window_destroy(GTK_WINDOW(dialog));
+}
+
+// Modified: Added callback for deleting all students
+// Modified: Updated on_delete_all_students to show a confirmation dialog
+static void on_delete_all_students(GtkWidget *button, gpointer window) {
+    GtkWidget *dialog = gtk_window_new();
+    gtk_window_set_title(GTK_WINDOW(dialog), "Confirm Delete All");
+    gtk_window_set_modal(GTK_WINDOW(dialog), TRUE);
+    gtk_window_set_transient_for(GTK_WINDOW(dialog), GTK_WINDOW(window));
+    gtk_window_set_default_size(GTK_WINDOW(dialog), 380, -1);
+
+    GtkWidget *content = gtk_box_new(GTK_ORIENTATION_VERTICAL, 16);
+    gtk_widget_add_css_class(content, "card");
+    gtk_window_set_child(GTK_WINDOW(dialog), content);
+
+    GtkWidget *header = gtk_label_new("Delete All Records");
+    gtk_widget_add_css_class(header, "header");
+    gtk_box_append(GTK_BOX(content), header);
+
+    gtk_box_append(GTK_BOX(content), gtk_label_new("Are you sure you want to delete all student records? This action cannot be undone."));
+
+    GtkWidget *button_box = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 16);
+    gtk_widget_set_halign(button_box, GTK_ALIGN_CENTER);
+
+    GtkWidget *yes_btn = gtk_button_new_with_label("Yes");
+    gtk_widget_add_css_class(yes_btn, "danger");
+    g_signal_connect(yes_btn, "clicked", G_CALLBACK(on_confirm_delete_all), dialog);
+    gtk_box_append(GTK_BOX(button_box), yes_btn);
+
+    GtkWidget *no_btn = gtk_button_new_with_label("No");
+    gtk_widget_add_css_class(no_btn, "primary");
+    g_signal_connect_swapped(no_btn, "clicked", G_CALLBACK(gtk_window_destroy), dialog);
+    gtk_box_append(GTK_BOX(button_box), no_btn);
+
+    gtk_box_append(GTK_BOX(content), button_box);
+    gtk_window_present(GTK_WINDOW(dialog));
+}
+
+// New callback to refresh list view before showing it
+static void on_list_students_clicked(GtkWidget *button, gpointer window) {
+    refresh_list_view(); // Refresh data before showing
+    show_list_view(window);
+    on_button_clicked(button, NULL); // Maintain existing button highlight logic
 }
 
 void create_main_window(GtkApplication *app) {
@@ -145,6 +193,9 @@ void create_main_window(GtkApplication *app) {
 
     app_data = g_new0(AppData, 1);
     app_data->change_count = 0;
+
+    // Initialize list_store once
+    app_data->list_store = gtk_list_store_new(5, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING);
 
     GtkWidget *window = gtk_application_window_new(app);
     gtk_window_set_title(GTK_WINDOW(window), "Student Database Management System");

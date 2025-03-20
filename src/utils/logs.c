@@ -34,10 +34,20 @@ void log_action(const char *message) {
 
     time_t now = time(NULL);
     char *timestamp = ctime(&now);
-    timestamp[strlen(timestamp) - 1] = '\0';
+    if (timestamp) {
+        timestamp[strlen(timestamp) - 1] = '\0'; // Remove newline
+    } else {
+        timestamp = "Unknown time"; // Fallback if ctime fails
+    }
 
     char log_message[1024];
     snprintf(log_message, sizeof(log_message), "[%s] %s\n", timestamp, message);
+
+    // Validate UTF-8 before insertion
+    if (!g_utf8_validate(log_message, -1, NULL)) {
+        // If invalid, replace with a safe fallback
+        snprintf(log_message, sizeof(log_message), "[%s] %s (sanitized)\n", timestamp, "Invalid log entry");
+    }
 
     if (log_file) {
         fprintf(log_file, "%s", log_message);

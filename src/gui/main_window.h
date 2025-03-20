@@ -18,6 +18,7 @@ typedef struct {
     GtkWidget *stack;
     GtkWidget *form_view;
     int change_count;
+    GtkListStore *list_store; // Already present, used for real-time updates
 } AppData;
 
 extern sqlite3 *db;

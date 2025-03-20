@@ -1,16 +1,9 @@
-
 #include "list_view.h"
 #include "../db/db.h"
 #include "../utils/voice.h"
 #include "../utils/logs.h"
 #include "form_view.h"
 #include <gtk/gtk.h>
-
-/*
-// Suppress GTK deprecation warnings for this file
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
-*/
 
 extern sqlite3 *db;
 extern AppData *app_data;
@@ -44,7 +37,49 @@ static void on_row_activated(GtkTreeView *tree_view, GtkTreePath *path, GtkTreeV
     }
 }
 
+// New function to refresh the list store with current database data
+void refresh_list_view(void) {
+    if (!app_data->list_store) return; // Safety check
+
+    // Clear the existing store
+    gtk_list_store_clear(app_data->list_store);
+
+    // Fetch updated student data
+    GList *students = db_get_all_students(db);
+    for (GList *iter = students; iter != NULL; iter = iter->next) {
+        Student *student = (Student *)iter->data;
+        GtkTreeIter tree_iter;
+        gtk_list_store_append(app_data->list_store, &tree_iter);
+        gtk_list_store_set(app_data->list_store, &tree_iter,
+                           0, student->reg_no,
+                           1, student->name,
+                           2, student->dept,
+                           3, student->email,
+                           4, student->mobile,
+                           -1);
+    }
+    g_list_free_full(students, (GDestroyNotify)student_free);
+}
+
 void show_list_view(GtkWidget *window) {
+    // If list_store doesn't exist, create it (first time initialization)
+    if (!app_data->list_store) {
+        app_data->list_store = gtk_list_store_new(5, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING);
+    }
+
+    // Check if the list view already exists in the stack
+    GtkWidget *existing_list = gtk_stack_get_child_by_name(GTK_STACK(app_data->stack), "list");
+    if (existing_list) {
+        // If it exists, just refresh the data and switch to it
+        refresh_list_view();
+        gtk_stack_set_visible_child_name(GTK_STACK(app_data->stack), "list");
+        voice_speak("Student list refreshed");
+        log_action("Student list refreshed");
+        gtk_label_set_text(GTK_LABEL(app_data->status_bar), "Student list refreshed");
+        return;
+    }
+
+    // Create the list view (first time only)
     GtkWidget *list_view = gtk_box_new(GTK_ORIENTATION_VERTICAL, 16);
     gtk_widget_add_css_class(list_view, "card");
 
@@ -56,26 +91,11 @@ void show_list_view(GtkWidget *window) {
     gtk_entry_set_placeholder_text(GTK_ENTRY(app_data->search_entry), "Search by Registration No.");
     gtk_box_append(GTK_BOX(list_view), app_data->search_entry);
 
-    GList *students = db_get_all_students(db);
-    GtkListStore *store = gtk_list_store_new(5, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_STRING);
+    // Populate the list store with initial data
+    refresh_list_view();
 
-    for (GList *iter = students; iter != NULL; iter = iter->next) {
-        Student *student = (Student *)iter->data;
-        GtkTreeIter tree_iter;
-        gtk_list_store_append(store, &tree_iter);
-        gtk_list_store_set(store, &tree_iter,
-                           0, student->reg_no,
-                           1, student->name,
-                           2, student->dept,
-                           3, student->email,
-                           4, student->mobile,
-                           -1);
-    }
-
-    g_list_free_full(students, (GDestroyNotify)student_free);
-
-    GtkWidget *tree_view = gtk_tree_view_new_with_model(GTK_TREE_MODEL(store));
-    g_object_unref(store);
+    GtkWidget *tree_view = gtk_tree_view_new_with_model(GTK_TREE_MODEL(app_data->list_store));
+    // Note: We don’t unref the store here since it’s stored in app_data and reused
 
     GtkCellRenderer *renderer = gtk_cell_renderer_text_new();
     gtk_tree_view_insert_column_with_attributes(GTK_TREE_VIEW(tree_view), -1, "Reg No.", renderer, "text", 0, NULL);
@@ -98,6 +118,3 @@ void show_list_view(GtkWidget *window) {
     log_action("Student list displayed");
     gtk_label_set_text(GTK_LABEL(app_data->status_bar), "Student list loaded");
 }
-
-// Re-enable warnings after this file
-//#pragma GCC diagnostic pop
