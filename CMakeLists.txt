@@ -59,6 +59,7 @@ target_link_libraries(${PROJECT_NAME}
         ${GTK4_LIBRARIES}
         ${SQLITE3_LIBRARIES}
         ${CAIRO_LIBRARIES}
+        m
 )
 
 # Conditionally link espeak if found

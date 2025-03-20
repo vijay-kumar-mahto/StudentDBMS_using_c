@@ -23,10 +23,11 @@ static const char *css_data =
     "button.active { background: linear-gradient(135deg, #ff6200, #ff8c00); color: white; font-weight: bold; }"
     "entry { border-radius: 6px; padding: 10px; margin: 6px; box-shadow: inset 0 1px 3px rgba(0,0,0,0.1); }"
     ".sidebar { background: linear-gradient(180deg, alpha(@theme_bg_color, 0.92), alpha(@theme_bg_color, 0.96)); border-right: 1px solid alpha(@theme_fg_color, 0.1); }"
-    ".header { font-size: 22px; font-weight: bold; margin-bottom: 20px; color: @theme_selected_fg_color; }"
+    ".header { font-size: 22px; font-weight: bold; margin-bottom: 20px; color: #6D8196; }"
     ".card { background: alpha(@theme_bg_color, 0.9); border-radius: 12px; padding: 20px; margin: 12px; box-shadow: 0 6px 16px rgba(0,0,0,0.08); transition: all 300ms ease; }"
     ".card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.12); transform: translateY(-2px); }"
-    ".status-bar { padding: 8px; background: alpha(@theme_bg_color, 0.8); box-shadow: 0 2px 4px rgba(0,0,0,0.05); }";
+    ".status-bar { padding: 8px; background: alpha(@theme_bg_color, 0.8); box-shadow: 0 2px 4px rgba(0,0,0,0.05); }"
+    ;
 
 static void load_css(void) {
     GtkCssProvider *provider = gtk_css_provider_new();
@@ -199,7 +200,7 @@ void create_main_window(GtkApplication *app) {
 
     GtkWidget *window = gtk_application_window_new(app);
     gtk_window_set_title(GTK_WINDOW(window), "Student Database Management System");
-    gtk_window_set_default_size(GTK_WINDOW(window), 1024, 768);
+    gtk_window_set_default_size(GTK_WINDOW(window), 500, 500);
     gtk_window_set_decorated(GTK_WINDOW(window), TRUE);
     gtk_window_set_resizable(GTK_WINDOW(window), TRUE);
 

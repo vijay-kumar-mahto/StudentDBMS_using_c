@@ -396,3 +396,197 @@
 [Thu Mar 20 21:45:33 2025] Theme switched
 [Thu Mar 20 21:45:34 2025] Theme switched
 [Thu Mar 20 21:45:36 2025] Students exported to CSV
+[Thu Mar 20 22:14:55 2025] Logging system initialized
+[Thu Mar 20 22:14:55 2025] Application started
+[Thu Mar 20 22:15:21 2025] Logging system initialized
+[Thu Mar 20 22:15:21 2025] Application started
+[Thu Mar 20 22:15:26 2025] Logging system initialized
+[Thu Mar 20 22:15:26 2025] Application started
+[Thu Mar 20 22:31:02 2025] Logging system initialized
+[Thu Mar 20 22:31:02 2025] Application started
+[Thu Mar 20 22:31:31 2025] Logging system initialized
+[Thu Mar 20 22:31:31 2025] Application started
+[Thu Mar 20 22:31:55 2025] Logging system initialized
+[Thu Mar 20 22:31:55 2025] Application started
+[Thu Mar 20 22:32:38 2025] Logging system initialized
+[Thu Mar 20 22:32:38 2025] Application started
+[Thu Mar 20 22:32:49 2025] Logging system initialized
+[Thu Mar 20 22:32:49 2025] Application started
+[Thu Mar 20 22:32:59 2025] All student records deleted
+[Thu Mar 20 22:33:05 2025] Student list displayed
+[Thu Mar 20 22:33:15 2025] Added student: 430
+[Thu Mar 20 22:40:04 2025] Logging system initialized
+[Thu Mar 20 22:40:04 2025] Application started
+[Thu Mar 20 22:41:18 2025] Logging system initialized
+[Thu Mar 20 22:41:18 2025] Application started
+[Thu Mar 20 22:42:32 2025] Logging system initialized
+[Thu Mar 20 22:42:32 2025] Application started
+[Thu Mar 20 22:43:09 2025] Logging system initialized
+[Thu Mar 20 22:43:09 2025] Application started
+[Thu Mar 20 22:43:45 2025] Logging system initialized
+[Thu Mar 20 22:43:45 2025] Application started
+[Thu Mar 20 22:44:02 2025] Logging system initialized
+[Thu Mar 20 22:44:02 2025] Application started
+[Thu Mar 20 22:45:08 2025] Logging system initialized
+[Thu Mar 20 22:45:08 2025] Application started
+[Thu Mar 20 22:47:39 2025] Logging system initialized
+[Thu Mar 20 22:47:39 2025] Application started
+[Thu Mar 20 22:52:29 2025] Logging system initialized
+[Thu Mar 20 22:52:29 2025] Application started
+[Thu Mar 20 22:54:16 2025] Logging system initialized
+[Thu Mar 20 22:54:17 2025] Application started
+[Thu Mar 20 22:54:38 2025] Logging system initialized
+[Thu Mar 20 22:54:38 2025] Application started
+[Thu Mar 20 22:55:06 2025] Logging system initialized
+[Thu Mar 20 22:55:06 2025] Application started
+[Thu Mar 20 22:55:39 2025] Logging system initialized
+[Thu Mar 20 22:55:39 2025] Application started
+[Thu Mar 20 22:59:37 2025] Logging system initialized
+[Thu Mar 20 22:59:37 2025] Application started
+[Thu Mar 20 23:00:12 2025] Logging system initialized
+[Thu Mar 20 23:00:12 2025] Application started
+[Thu Mar 20 23:01:11 2025] Logging system initialized
+[Thu Mar 20 23:01:11 2025] Application started
+[Thu Mar 20 23:01:28 2025] Logging system initialized
+[Thu Mar 20 23:01:28 2025] Application started
+[Thu Mar 20 23:01:41 2025] Logging system initialized
+[Thu Mar 20 23:01:41 2025] Application started
+[Thu Mar 20 23:02:27 2025] Logging system initialized
+[Thu Mar 20 23:02:27 2025] Application started
+[Thu Mar 20 23:03:05 2025] Logging system initialized
+[Thu Mar 20 23:03:05 2025] Application started
+[Thu Mar 20 23:03:21 2025] Logging system initialized
+[Thu Mar 20 23:03:21 2025] Application started
+[Thu Mar 20 23:03:32 2025] Logging system initialized
+[Thu Mar 20 23:03:32 2025] Application started
+[Thu Mar 20 23:04:06 2025] Logging system initialized
+[Thu Mar 20 23:04:06 2025] Application started
+[Thu Mar 20 23:04:28 2025] Logging system initialized
+[Thu Mar 20 23:04:28 2025] Application started
+[Thu Mar 20 23:07:27 2025] Logging system initialized
+[Thu Mar 20 23:07:27 2025] Application started
+[Thu Mar 20 23:11:31 2025] Logging system initialized
+[Thu Mar 20 23:11:31 2025] Application started
+[Thu Mar 20 23:24:03 2025] Logging system initialized
+[Thu Mar 20 23:24:03 2025] Application started
+[Thu Mar 20 23:24:17 2025] Logging system initialized
+[Thu Mar 20 23:24:17 2025] Application started
+[Thu Mar 20 23:24:24 2025] Student list displayed
+[Thu Mar 20 23:24:32 2025] Student list refreshed
+[Thu Mar 20 23:24:39 2025] Added student: 123
+[Thu Mar 20 23:24:52 2025] Added student: 34
+[Thu Mar 20 23:25:05 2025] Added student: 234
+[Thu Mar 20 23:25:16 2025] Added student: 654
+[Thu Mar 20 23:25:27 2025] Failed to add student
+[Thu Mar 20 23:25:36 2025] Student list refreshed
+[Thu Mar 20 23:25:44 2025] Failed to add student
+[Thu Mar 20 23:25:50 2025] Student list refreshed
+[Thu Mar 20 23:25:59 2025] Added student: 421
+[Thu Mar 20 23:26:03 2025] Invalid log entry (sanitized)
+[Thu Mar 20 23:26:16 2025] Added student: 852
+[Thu Mar 20 23:26:32 2025] All student records deleted
+[Thu Mar 20 23:26:39 2025] Student list refreshed
+[Thu Mar 20 23:26:45 2025] Logging system initialized
+[Thu Mar 20 23:26:45 2025] Application started
+[Thu Mar 20 23:28:58 2025] Logging system initialized
+[Thu Mar 20 23:28:58 2025] Application started
+[Thu Mar 20 23:29:06 2025] Added student: 123
+[Thu Mar 20 23:29:24 2025] Logging system initialized
+[Thu Mar 20 23:29:24 2025] Application started
+[Thu Mar 20 23:37:43 2025] Logging system initialized
+[Thu Mar 20 23:37:43 2025] Application started
+[Thu Mar 20 23:39:10 2025] Logging system initialized
+[Thu Mar 20 23:39:10 2025] Application started
+[Thu Mar 20 23:39:30 2025] Theme switched
+[Thu Mar 20 23:39:36 2025] Theme switched
+[Thu Mar 20 23:39:50 2025] Theme switched
+[Thu Mar 20 23:39:51 2025] Theme switched
+[Thu Mar 20 23:39:56 2025] Theme switched
+[Thu Mar 20 23:39:56 2025] Theme switched
+[Thu Mar 20 23:40:05 2025] Theme switched
+[Thu Mar 20 23:40:06 2025] Theme switched
+[Thu Mar 20 23:40:07 2025] Theme switched
+[Thu Mar 20 23:40:30 2025] Logging system initialized
+[Thu Mar 20 23:40:30 2025] Application started
+[Thu Mar 20 23:40:34 2025] Theme switched
+[Thu Mar 20 23:40:35 2025] Theme switched
+[Thu Mar 20 23:40:52 2025] Logging system initialized
+[Thu Mar 20 23:40:52 2025] Application started
+[Thu Mar 20 23:40:54 2025] Theme switched
+[Thu Mar 20 23:40:55 2025] Theme switched
+[Thu Mar 20 23:41:22 2025] Logging system initialized
+[Thu Mar 20 23:41:22 2025] Application started
+[Thu Mar 20 23:41:35 2025] Theme switched
+[Thu Mar 20 23:42:59 2025] Logging system initialized
+[Thu Mar 20 23:42:59 2025] Application started
+[Thu Mar 20 23:43:03 2025] Theme switched
+[Thu Mar 20 23:43:06 2025] Theme switched
+[Thu Mar 20 23:43:08 2025] Theme switched
+[Thu Mar 20 23:43:29 2025] Logging system initialized
+[Thu Mar 20 23:43:29 2025] Application started
+[Thu Mar 20 23:43:33 2025] Theme switched
+[Thu Mar 20 23:43:42 2025] Theme switched
+[Thu Mar 20 23:43:43 2025] Theme switched
+[Thu Mar 20 23:44:02 2025] Logging system initialized
+[Thu Mar 20 23:44:02 2025] Application started
+[Thu Mar 20 23:44:06 2025] Theme switched
+[Thu Mar 20 23:44:15 2025] Logging system initialized
+[Thu Mar 20 23:44:15 2025] Application started
+[Thu Mar 20 23:44:18 2025] Theme switched
+[Thu Mar 20 23:44:46 2025] Logging system initialized
+[Thu Mar 20 23:44:46 2025] Application started
+[Thu Mar 20 23:46:05 2025] Logging system initialized
+[Thu Mar 20 23:46:05 2025] Application started
+[Thu Mar 20 23:46:32 2025] Logging system initialized
+[Thu Mar 20 23:46:32 2025] Application started
+[Thu Mar 20 23:46:36 2025] Theme switched
+[Thu Mar 20 23:46:38 2025] Theme switched
+[Thu Mar 20 23:46:39 2025] Theme switched
+[Thu Mar 20 23:47:31 2025] Logging system initialized
+[Thu Mar 20 23:47:31 2025] Application started
+[Thu Mar 20 23:47:53 2025] Logging system initialized
+[Thu Mar 20 23:47:53 2025] Application started
+[Thu Mar 20 23:47:56 2025] Student list displayed
+[Thu Mar 20 23:48:05 2025] Added student: 430
+[Thu Mar 20 23:48:13 2025] Added student: iuehi
+[Thu Mar 20 23:48:20 2025] Added student: ewuo
+[Thu Mar 20 23:48:23 2025] Student list refreshed
+[Thu Mar 20 23:48:25 2025] Students exported to CSV
+[Thu Mar 20 23:48:45 2025] Logging system initialized
+[Thu Mar 20 23:48:45 2025] Application started
+[Thu Mar 20 23:48:49 2025] All student records deleted
+[Thu Mar 20 23:48:54 2025] Student list displayed
+[Thu Mar 20 23:48:55 2025] Students exported to CSV
+[Fri Mar 21 00:50:06 2025] Logging system initialized
+[Fri Mar 21 00:50:06 2025] Application started
+[Fri Mar 21 00:50:30 2025] Added student: 2201020430
+[Fri Mar 21 00:50:50 2025] Added student: 2201020420
+[Fri Mar 21 00:51:10 2025] Added student: 2201020913
+[Fri Mar 21 00:51:27 2025] Added student: 2201020737
+[Fri Mar 21 00:51:55 2025] Added student: 2201020713
+[Fri Mar 21 00:51:58 2025] Invalid log entry (sanitized)
+[Fri Mar 21 00:52:12 2025] Student list displayed
+[Fri Mar 21 00:52:50 2025] All student records deleted
+[Fri Mar 21 00:53:05 2025] Logging system initialized
+[Fri Mar 21 00:53:05 2025] Application started
+[Fri Mar 21 00:54:23 2025] Added student: 456
+[Fri Mar 21 00:55:13 2025] Added student: 123
+[Fri Mar 21 00:56:08 2025] Added student: 523
+[Fri Mar 21 00:57:11 2025] Added student: 854
+[Fri Mar 21 00:57:59 2025] Added student: 451
+[Fri Mar 21 00:58:04 2025] Invalid log entry (sanitized)
+[Fri Mar 21 00:58:10 2025] Student list displayed
+[Fri Mar 21 00:58:33 2025] Student list refreshed
+[Fri Mar 21 00:59:00 2025] Updated student: 523
+[Fri Mar 21 00:59:03 2025] Student list refreshed
+[Fri Mar 21 00:59:22 2025] Updated student: 523
+[Fri Mar 21 00:59:28 2025] Student list refreshed
+[Fri Mar 21 01:00:10 2025] Updated student: 123
+[Fri Mar 21 01:00:13 2025] Student list refreshed
+[Fri Mar 21 01:00:43 2025] Updated student: 456
+[Fri Mar 21 01:00:47 2025] Student list refreshed
+[Fri Mar 21 01:02:11 2025] Student list refreshed
+[Fri Mar 21 01:02:29 2025] Student list refreshed
+[Fri Mar 21 01:02:31 2025] Theme switched
+[Fri Mar 21 01:02:32 2025] Theme switched
+[Fri Mar 21 01:02:45 2025] Students exported to CSV

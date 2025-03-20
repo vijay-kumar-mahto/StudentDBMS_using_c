@@ -3,6 +3,7 @@
 
 #include <gtk/gtk.h>
 #include <sqlite3.h>
+#include "form_view.h"
 #include "main_window.h"  // Includes AppData definition
 
 extern sqlite3 *db;

@@ -244,6 +244,11 @@
 			},
 			{
 				"backtrace" : 2,
+				"fragment" : "-lm",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
 				"fragment" : "-lvulkan",
 				"role" : "libraries"
 			},
@@ -270,6 +275,11 @@
 			{
 				"backtrace" : 2,
 				"fragment" : "-lsqlite3",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "-lm",
 				"role" : "libraries"
 			}
 		],

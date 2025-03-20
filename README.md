@@ -1,16 +1,28 @@
 # StudentDBMS 📚👨‍🎓
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Version](https://img.shields.io/badge/version-1.1.0-green.svg)
-![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20Windows*%20%7C%20macOS*-lightgrey.svg)
+![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20Windows%20%7C%20macOS-lightgrey.svg)
 
 > *A modern, intuitive student database management system built with C and GTK4.*
 
 <div align="center">
-  <img src="resources/logo.png" alt="StudentDBMS Logo" width="200"/>
+  <img src="resources/thumbnails/logo.png" alt="StudentDBMS Logo" width="200"/>
   <br>
   <i>Simplifying student records management for educational institutions</i>
 </div>
+
+
+## Table of Contents
+- [Features](#-Features)
+- [Screenshots](#-Screenshots)
+- [Tech Stack](#-Tech-Stack)
+- [Requirements](#-Requirements)
+- [Installation](#-Installation)
+- [Usage](#-Usage)
+- [Project Structure](#-Project-Structure)
+- [Contributing](#-contributing)
+- [Author](#-Author)
+- [Contact](#-contact)
 
 ## ✨ Features
 
@@ -26,10 +38,10 @@
 ## 🖼️ Screenshots
 
 <div align="center">
-<img src="Resources/thumbnails/menu.png" alt="Main Menu" width="20%">
-<img src="Resources/thumbnails/setting.png" alt="Settings Screen" width="20%">
-<img src="Resources/thumbnails/level.png" alt="Level Selection" width="20%">
-<img src="Resources/thumbnails/gameplay.png" alt="Gameplay" width="20%">
+<img src="resources/thumbnails/main_menu.png" alt="Main Menu" width="20%">
+<img src="resources/thumbnails/view_list.png" alt="Settings Screen" width="20%">
+<img src="resources/thumbnails/delete_all.png" alt="Level Selection" width="20%">
+<img src="resources/thumbnails/white_theme.png" alt="Gameplay" width="20%">
 </div>
 
 ## 🛠️ Tech Stack
@@ -81,7 +93,7 @@ make
 
 ### Other platforms
 
-Support for Windows and macOS is planned. Stay tuned for updates!
+Support for Windows(10+) and macOS.
 
 ## 🎮 Usage
 
@@ -125,47 +137,42 @@ The application features a sidebar with the following options:
 
 ```
 StudentDBMS/
-├── CMakeLists.txt        # Build configuration
-├── main.c                # Application entry point
-├── data/                 # Database and logs
-│   ├── students.db       # SQLite database
-│   ├── activity.log      # Activity logs
-│   └── students_export.csv # Exported student data
-├── resources/            # UI assets
-│   ├── logo.png          # Application logo
-│   └── style.css         # Basic CSS
+├── assets/              # Assets like logo.png
 ├── src/
-│   ├── db/               # Database logic
-│   ├── gui/              # GUI components
-│   ├── utils/            # Utility functions
-│   └── visuals/          # Data visualization
-└── README.md             # This file
+│   ├── db/              # Database operations (db.c, db.h)
+│   ├── gui/             # GUI components (main_window.c, form_view.c, list_view.c)
+│   ├── utils/           # Utilities (voice.c, themes.c, logs.c, gui_utils.c)
+│   ├── visuals/         # Chart rendering (charts.c)
+│   └── main.c           # Entry point
+├── CMakeLists.txt       # CMake configuration
+└── README.md            # Project documentation
 ```
-
-## 🔜 Roadmap
-
-### Coming Soon
-- **🔍 Search functionality** - Search and filter student records
-- **📊 Enhanced visualizations** - Department labels and additional chart types
-- **📱 Responsive design** - Better support for various screen sizes
-- **🔄 Data import** - Import student records from CSV files
-- **↩️ Undo functionality** - Recover from accidental deletions
-- **📄 Pagination** - Better performance with large datasets
-- **🖥️ Cross-platform support** - Windows and macOS compatibility
 
 ## 🤝 Contributing
 
 Feel free to fork this repository and submit pull requests with improvements!
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+#### Fork the repository
 
-## 👥 Authors
+#### Create your feature branch 
+```sh 
+git checkout -b feature/amazing-feature
+```
+#### Commit your changes
+```sh 
+git commit -m 'Add some amazing feature'
+```
 
-- **Your Name** - [Vijay Kumar Mahto](https://github.com/vijay_kumar-mahto)
+#### Push to the branch 
+```sh 
+git push origin feature/amazing-feature
+```
+
+#### Open a Pull Request
+
+## 👥 Author
+
+- **Your Name** - Vijay Kumar Mahto
 
 ## 📞 Contact
 
@@ -174,18 +181,3 @@ For questions, suggestions, or issues:
 - **LinkedIn:** [Vijay Kumar Mahto](https://linkedin.com/in/vijay-kumar-mahto-872901298/)
 - **GitHub**: [vijay-kumar-mahto](https://github.com/vijay-kumar-mahto)
 - **Issues**: [Report a bug](https://github.com/vijay-kumar-mahto/brick-breaker/issues)
-
-
-## 🙏 Acknowledgments
-
-- GTK team for the excellent GUI framework
-- SQLite team for the reliable embedded database
-- All contributors who have helped shape this project
-
----
-
-<div align="center">
-  Made with ❤️ for educational institutions
-  <br>
-  © 2025 StudentDBMS
-</div>
